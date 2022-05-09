@@ -1,6 +1,13 @@
 <template>
   <nav>
 <div class="sign container-fluid">
+          <div class="text-center d-flex">
+          <i class="bi noti-ico icon bi-bell-fill"></i
+          ><b
+            >
+            </b
+          >
+        </div>
       <router-link
         to="/signup"
         active-class="active"
@@ -38,6 +45,14 @@ export default {
 </script>
 
 <style scoped>
+.icon {
+  color: rgb(251, 104, 12);
+  font-size: 18px;
+}
+.icon2 {
+  color: rgb(251, 104, 12);
+}
+
 nav{
     height: 50px;
     border-bottom: solid 2px rgb(230, 230, 230);
@@ -66,5 +81,10 @@ a {
   position: relative;
   color: white;
   font-weight: 600;
+}
+@media all and (min-width:431px) {
+.noti-ico{
+  display: none !important;
+}
 }
 </style>

@@ -129,7 +129,7 @@ a {
     padding-left: 20px;
   }
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 767px) {
 .span {
   display: none;
 }

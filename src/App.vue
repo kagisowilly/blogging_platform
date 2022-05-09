@@ -4,7 +4,6 @@
    <Sidebar />  
   </div>
    <div >
-     <Navbar /> 
      <div class="scroll-home">
 
      </div>
@@ -53,11 +52,12 @@ export default {
     border-radius: 10px;
     margin: 6px 6px 6px 0px;
 }
-@media all and (max-width: 600px) {
+@media all and (max-width: 767px) {
 .dashboard {
 
     grid-template-columns: 70px 5fr;
 
 }
 }
+
 </style>

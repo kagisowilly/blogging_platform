@@ -3,28 +3,50 @@
     <div class="cont container">
       <div class="formm">
         <div class="form-cont">
+          <div class="sign container">
+            <router-link
+              to="/signup"
+              active-class="active"
+              tag="button"
+              exact
+              class="side-btn"
+            >
+              <div class="link-container">
+                <b>
+                  <span class="text-white span">Sign up</span>
+                </b>
+              </div>
+            </router-link>
+            <router-link
+              to="/login"
+              active-class="active"
+              tag="button"
+              exact
+              class="side-btn"
+            >
+              <div class="link-container">
+                <b>
+                  <span class="text-white span">Login</span>
+                </b>
+              </div>
+            </router-link>
+          </div>
+         <hr class="text-white">
           <form @submit.prevent="register" class="contactMe container">
-            <label class="text-black">Name:</label>
+            <label class="text-white name">Name:</label>
             <input
               class="form-input neu-border-inset"
               type="text"
               v-model="user_name"
             />
-            <label class="text-black">Email:</label>
+            <label class="text-white">Email:</label>
             <input
               class="form-input neu-border-inset"
               type="email"
               v-model="user_email"
             />
 
-            <label class="text-black">Contact:</label>
-            <input
-              class="form-input neu-border-inset"
-              type="text"
-              v-model="user_contactNumber"
-            />
-
-            <label class="text-black">Password:</label>
+            <label class="text-white">Password:</label>
             <input
               class="form-input neu-border-inset"
               type="password"
@@ -83,59 +105,69 @@ export default {
 </script>
 
 <style scoped>
-
+.sign {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  column-gap: 30px;
+}
+.name {
+  margin-top: 30px;
+}
 section {
   height: 100vh;
 }
 .form-cont {
   width: 50%;
+  background-color: rgba(51, 51, 51, 255);
+  border-radius: 14px;
+  box-shadow: -2px 13px 20px 9px rgba(251, 104, 12, 0.94);
+  -webkit-box-shadow: -2px 13px 20px 9px rgba(251, 104, 12, 0.94);
+  -moz-box-shadow: 210px 13px 20px 9px rgba(251, 104, 12, 0.94);
 }
 form {
   max-width: 100%;
   margin: 30px auto;
   text-align: left;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: -10px 13px 20px 9px rgba(220, 220, 220, 0.94);
-  -webkit-box-shadow: -10px 13px 20px 9px rgba(220, 220, 220, 0.94);
-  -moz-box-shadow: -10px 13px 20px 9px rgba(220, 220, 220, 0.94);
+
+  padding-bottom: 50px;
 }
 label {
   color: rgb(0, 0, 0);
   display: inline-block;
-  margin: 10px 0 15px;
+  margin: 15px 0 0px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
 }
 input {
+  border-radius: 30px;
   display: block;
   padding: 7px 6px;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #ddd;
   color: rgb(0, 0, 0);
-  background-color: rgba(233, 221, 221, 0.25);
+  background-color: rgb(255, 255, 255);
 }
 .button-body {
-  background: rgba(139, 102, 96, 0.924);
+  background: rgb(251, 104, 12);
   border: 0;
   padding: 7px 15px;
   margin-top: 20px;
   color: rgb(255, 255, 255);
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   margin-bottom: 30px !important;
 }
 button:hover {
   opacity: 0.8;
-  background: rgba(10, 81, 139, 0.979);
+  background: rgba(251, 252, 253, 0.979);
 }
 .submit {
-  text-align: center;
-}
-#sub:hover {
-  color: rgb(255, 255, 255) !important;
+  text-align: start;
 }
 #sub {
   color: white;
@@ -155,7 +187,7 @@ button:hover {
 }
 .formm {
   width: 100%;
-  
+
   justify-content: center;
   align-items: center !important;
   display: flex;
@@ -178,36 +210,31 @@ button:hover {
   .form-cont {
     width: 60%;
   }
- form{
-  margin-top: 70px !important;
-}
-input {
-  display: block;
-  padding: 5px 6px;
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid #ddd;
-  color: rgb(0, 0, 0);
-  background-color: rgba(233, 221, 221, 0.25);
-}
-.button-body {
-  background: rgba(139, 102, 96, 0.924);
-  border: 0;
-  padding: 5px 20px;
-  margin-top: 15px;
-  color: rgb(255, 255, 255);
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 10px !important;
-}
-label {
-  color: rgb(0, 0, 0);
-  display: inline-block;
-  margin: 5px 0 5px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
-}
+  input {
+    display: block;
+    padding: 5px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+  }
+  .button-body {
+    border: 0;
+    padding: 5px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px !important;
+  }
+  label {
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    margin: 5px 0 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
 }
 @media all and (max-width: 768px) {
   .form-cont {
@@ -218,10 +245,10 @@ label {
   .form-cont {
     width: 80%;
   }
-  .login-title  {
+  .login-title {
     position: fixed;
-  top: 110px;
-}
+    top: 110px;
+  }
 }
 @media all and (max-width: 400px) {
 }
