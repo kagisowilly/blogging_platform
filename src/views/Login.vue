@@ -26,7 +26,7 @@
               <p class="pb-4">
                 Not a member?
                 <router-link :to="{ name: 'signup' }"
-                  >Create an account</router-link
+                  >Create an account ?</router-link
                 >
               </p>
             </div>
