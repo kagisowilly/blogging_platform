@@ -3,8 +3,11 @@
   <div class="sideB">
    <Sidebar />  
   </div>
-   <div>
+   <div >
      <Navbar /> 
+     <div class="scroll-home">
+
+     </div>
     <router-view/> 
    </div>
  
@@ -33,14 +36,16 @@ export default {
 }
 .sideB{
     background-color: rgb(81, 81, 81);
+
 }
 
 .dashboard {
     display: grid;
     grid-template-columns: 200px 5fr;
     background-color: rgb(205, 205, 205);
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
+    position: fixed;
 }
 
 .content {
