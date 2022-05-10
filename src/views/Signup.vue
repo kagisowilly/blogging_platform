@@ -13,7 +13,7 @@
             >
               <div class="link-container">
                 <b>
-                  <span class="text-white span">Sign up</span>
+                  <span class="span">Sign up</span>
                 </b>
               </div>
             </router-link>
@@ -26,14 +26,14 @@
             >
               <div class="link-container">
                 <b>
-                  <span class="text-white span">Login</span>
+                  <span class="span">Login</span>
                 </b>
               </div>
             </router-link>
           </div>
          <hr class="text-white">
           <form @submit.prevent="register" class="contactMe container">
-            <label class="text-white name">Name:</label>
+            <label class="name text-white">Name:</label>
             <input
               class="form-input neu-border-inset"
               type="text"
@@ -105,6 +105,17 @@ export default {
 </script>
 
 <style scoped>
+a{text-decoration: none;
+text-decoration: underline;}
+.side-btn.active {
+  position: relative;
+  color: rgba(251, 104, 12, 0.94) !important;
+  font-weight: 600;
+}
+.side-btn{
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+hr{margin: 0;}
 .sign {
   display: flex;
   flex-wrap: wrap;

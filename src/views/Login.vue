@@ -3,14 +3,43 @@
     <div class="cont container">
       <div class="formm">
         <div class="form-cont">
+                    <div class="sign container">
+            <router-link
+              to="/signup"
+              active-class="active"
+              tag="button"
+              exact
+              class="side-btn"
+            >
+              <div class="link-container">
+                <b>
+                  <span class="span">Sign up</span>
+                </b>
+              </div>
+            </router-link>
+            <router-link
+              to="/login"
+              active-class="active"
+              tag="button"
+              exact
+              class="side-btn"
+            >
+              <div class="link-container">
+                <b>
+                  <span class="span">Login</span>
+                </b>
+              </div>
+            </router-link>
+          </div>
+         <hr class="text-white">
           <form @submit.prevent="login" class="contactMe container">
-            <label class="text-black">Email:</label>
+            <label class="text-white">Email:</label>
             <input
               class="form-input neu-border-inset"
               type="email"
               v-model="user_email"
             />
-            <label class="text-black">Password:</label>
+            <label class="text-white">Password:</label>
             <input
               class="form-input neu-border-inset"
               type="password"
@@ -23,7 +52,7 @@
               </button>
             </div>
             <div>
-              <p class="pb-4">
+              <p class="pb-4 text-white">
                 Not a member?
                 <router-link :to="{ name: 'signup' }"
                   >Create an account ?</router-link
@@ -78,6 +107,17 @@ export default {
 </script>
 
 <style scoped>
+a{text-decoration: none;
+text-decoration: underline;}
+hr{margin: 0;}
+.sign {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  column-gap: 30px;
+}
 section {
   height: 100vh;
   z-index: 999;
@@ -86,14 +126,15 @@ form {
   width: 100%;
   margin: 30px auto;
   text-align: left;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: -10px 13px 20px 9px rgba(220, 220, 220, 0.94);
-  -webkit-box-shadow: -10px 13px 20px 9px rgba(220, 220, 220, 0.94);
-  -moz-box-shadow: -10px 13px 20px 9px rgba(220, 220, 220, 0.94);
+
 }
 .form-cont {
   width: 50%;
+    border-radius: 14px;
+    background-color:  rgba(51, 51, 51, 255);
+  box-shadow: -2px 13px 20px 9px rgba(251, 104, 12, 0.94);
+  -webkit-box-shadow: -2px 13px 20px 9px rgba(251, 104, 12, 0.94);
+  -moz-box-shadow: 210px 13px 20px 9px rgba(251, 104, 12, 0.94);
 }
 label {
   color: rgb(0, 0, 0);
@@ -102,35 +143,42 @@ label {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
+
+}
+.side-btn.active {
+  position: relative;
+  color: rgba(251, 104, 12, 0.94) !important;
+  font-weight: 600;
+}
+.side-btn {
+  color: rgba(255, 255, 255, 0.94) !important;
 }
 input {
+  border-radius: 30px;
   display: block;
   padding: 10px 6px;
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #ddd;
   color: rgb(0, 0, 0);
-  background-color: rgba(233, 221, 221, 0.25);
+  background-color: rgb(255, 255, 255);
 }
 .button-body {
-  background: rgba(139, 102, 96, 0.924);
+  background: rgb(251, 104, 12);
   border: 0;
   padding: 10px 20px;
   margin-top: 20px;
   color: rgb(255, 255, 255);
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   margin-bottom: 50px !important;
 }
 button:hover {
   opacity: 0.8;
-  background: rgba(10, 81, 139, 0.979);
+  background: rgba(251, 252, 253, 0.979);
 }
 .submit {
-  text-align: center;
-}
-#sub:hover {
-  color: rgb(255, 255, 255) !important;
+  text-align: start;
 }
 #sub {
   color: white;
@@ -180,10 +228,8 @@ button:hover {
     box-sizing: border-box;
     border: 1px solid #ddd;
     color: rgb(0, 0, 0);
-    background-color: rgba(233, 221, 221, 0.25);
   }
   .button-body {
-    background: rgba(139, 102, 96, 0.924);
     border: 0;
     padding: 10px 20px;
     margin-top: 20px;
